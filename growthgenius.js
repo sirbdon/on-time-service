@@ -290,7 +290,7 @@ $('input[name="contact-info"]').keypress(function(event){
 $("form .submit").on('click', $(this), function() {
     // Form reset timer shorter on phone screens
     var resetTimer = ( isPhoneX() ) ? 3000 : 10000;
-    var dataContext    = $(this);
+    var dataContext    = $(this).parents("form").eq(0); // set data context for calling form reset function
     console.log("submit timer: " + isPhoneX() + resetTimer);
   
     // Contact info required - check it is not empty
