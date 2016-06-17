@@ -197,14 +197,14 @@ $(document).ready(function() {
     $(this).parent().find('.none0').fadeIn('fast');
   });
     
-  $('input[name="message"]').focusout(function() {
-    whiteOnPhone();
-    if ( $('input[name="message"]').prop('style').width !==  "20%" && !isPhoneX() ) { 
-      $('input[name="message"]').animate( { width: "20%" }, 100 ); // animate out
-    }
-    $('input[name="message"]').prop('placeholder', 'Type here...')
-    $('.none0').fadeOut('fast');
-  });
+  // $('input[name="message"]').focusout(function() {
+  //   whiteOnPhone();
+  //   if ( $('input[name="message"]').prop('style').width !==  "20%" && !isPhoneX() ) { 
+  //     $('input[name="message"]').animate( { width: "20%" }, 100 ); // animate out
+  //   }
+  //   $('input[name="message"]').prop('placeholder', 'Type here...')
+  //   $('.none0').fadeOut('fast');
+  // });
   
 
   
