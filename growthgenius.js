@@ -328,7 +328,7 @@ $("form .submit").on('click', $(this), function() {
             $(".thank-you").animate({opacity: .3}, 4000);
             window.setTimeout( // reset form after set delay
               contactReset.apply(dataContext, []), // call reset function with data context
-              delay
+              resetTimer
             ); 
           });
       });
