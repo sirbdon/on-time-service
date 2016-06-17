@@ -66,7 +66,7 @@ $(document).ready(function() {
     $('.thank-you').fadeOut('fast');
     $('.thank-you').remove();
     $('.none1, .none0').hide();
-    $('form').each(function(index) { $('form')[index].reset(); } // reset every form on page
+    $('form').each(function(index) { $('form')[index].reset(); } ) // reset every form on page
     $('input[name="message"]').eq(0).prop('style').width =  "20%"; // only apply width styling to navbar form
     $('input[name="message"]').prop('placeholder', 'Type here...');
     $('input').prop('required', false);
@@ -340,7 +340,7 @@ $('#canvas').find('.page-divider.top-divider').after(subtitle);
 }; // end if(CorrectUrl)
 
 }); // end doc ready
-</script>
+
 
 
 
