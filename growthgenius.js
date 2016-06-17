@@ -325,12 +325,11 @@ $("form .submit").on('click', $(this), function() {
           $('.thank-you').fadeIn(400, function() {
             $(".thank-you").animate({opacity: .3}, 4000);
 
-            contactReset.delay(resetTimer).apply(dataContext, []); // reset form after set delay using specified data context 
+            // .delay(resetTimer)contactReset.apply(dataContext, []); // reset form after set delay using specified data context 
 
-            // window.setTimeout( // reset form after set delay
-            //   contactReset.apply(dataContext, []), // call reset function with data context
-            //   resetTimer
-            // ); 
+            var windowFn = function() { contactReset.apply(dataContext, []) } // call reset function with data context // .apply executes code immediately; doesn't work with setTimeout so fore to put in function
+            window.setTimeout(windowFn, resetTimer)  // reset form after set delay
+
           });
       });
       return false;
