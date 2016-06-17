@@ -65,13 +65,13 @@ $(document).ready(function() {
   var contactReset = function() {
     $('.thank-you').fadeOut('fast');
     $('.thank-you').remove();
-    $('.none1, .none0').hide();
-    $('form').each(function(index) { $('form')[index].reset(); } ) // reset every form on page
-    $('input[name="message"]').eq(0).prop('style').width =  "20%"; // only apply width styling to navbar form
-    $('input[name="message"]').prop('placeholder', 'Type here...');
-    $('input').prop('required', false);
-    $('form').fadeIn('fast');
-    $('.some0').fadeIn('fast');  
+    $(this).find('.none1, .none0').hide(); // $this refers to $('form') that envoked it.
+    $(this).each(function(index) { $('form')[index].reset(); } ) // reset every form on page
+    $(this).find('input[name="message"]').eq(0).prop('style').width =  "20%"; // only apply width styling to navbar form
+    $(this).find('input[name="message"]').prop('placeholder', 'Type here...');
+    $(this).find('input').prop('required', false);
+    $(this).fadeIn('fast');
+    $(this).find('.some0').fadeIn('fast');  
     whiteOnPhone();
   }
 
