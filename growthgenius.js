@@ -290,6 +290,7 @@ $('input[name="contact-info"]').keypress(function(event){
 $("form .submit").on('click', $(this), function() {
     // Form reset timer shorter on phone screens
     var resetTimer = ( isPhoneX() ) ? 3000 : 10000;
+    var dataContext    = $(this);
     console.log("submit timer: " + isPhoneX() + resetTimer);
   
     // Contact info required - check it is not empty
@@ -324,7 +325,7 @@ $("form .submit").on('click', $(this), function() {
       $(this).parents("form").eq(0).fadeOut('fast', function() {
           $('.thank-you').fadeIn(400, function() {
             $(".thank-you").animate({opacity: .3}, 4000);
-            window.setTimeout(contactReset, resetTimer);
+            $.proxy(window.setTimeout(contactReset, resetTimer), dataContext); // call reset function with data context
           });
       });
       return false;
