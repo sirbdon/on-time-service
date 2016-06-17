@@ -64,6 +64,7 @@ $(document).ready(function() {
   // Reset form (hide / show appropriate elements, reset values .reset(), etc)
   var contactReset = function() {
     console.log($(this));
+    console.log($(this));
     $('.thank-you').fadeOut('fast');
     $('.thank-you').remove();
     $(this).find('.none1, .none0').hide(); // $this refers to $('form') that envoked it.
@@ -325,7 +326,10 @@ $("form .submit").on('click', $(this), function() {
       $(this).parents("form").eq(0).fadeOut('fast', function() {
           $('.thank-you').fadeIn(400, function() {
             $(".thank-you").animate({opacity: .3}, 4000);
-            $.proxy(window.setTimeout(contactReset, resetTimer), dataContext); // call reset function with data context
+            window.setTimeout( // reset form after set delay
+              contactReset.apply(dataContext, []), // call reset function with data context
+              delay
+            ); 
           });
       });
       return false;
