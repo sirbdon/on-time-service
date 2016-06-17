@@ -63,16 +63,17 @@ $(document).ready(function() {
 
   // Reset form (hide / show appropriate elements, reset values .reset(), etc)
   var contactReset = function() {
-    $('.thank-you').fadeOut('fast');
-    $('.thank-you').remove();
-    $(this).find('.none1, .none0').hide(); // $this refers to $('form') that envoked it.
-    $(this).each(function(index) { $('form')[index].reset(); } ) // reset every form on page
+    $('.thank-you').fadeOut('fast')
+    $('.thank-you').remove()
+    $(this).find('.none1, .none0').hide() // $this refers to $('form') that envoked it.
+    $(this).each(function(index) { $('form')[index].reset() } ) // reset every form on page
     $(this).find('input[name="message"]').eq(0).prop('style').width =  "20%"; // only apply width styling to navbar form
-    $(this).find('input[name="message"]').prop('placeholder', 'Type here...');
-    $(this).find('input').prop('required', false);
-    $(this).fadeIn('fast');
-    $(this).find('.some0').fadeIn('fast');  
-    whiteOnPhone();
+    $(this).find('input[name="message"]').prop('placeholder', 'Type here...')
+    $(this).find('input').prop('required', false)
+    $(this).fadeIn('fast')
+    $(this).find('.some0').fadeIn('fast')
+    whiteOnPhone()
+    console.log('form RESET')
   }
 
   // Date helpers
@@ -282,14 +283,14 @@ var formData = {
 $('input[name="contact-info"]').keypress(function(event){
   if(event.keyCode == 13){
     event.preventDefault();
-    $("form .submit").click();
+    $(this).parents('form').find('.submit').click();
   }
 });
 
 $("form .submit").on('click', $(this), function() {
     // Form reset timer shorter on phone screens
     var resetTimer = ( isPhoneX() ) ? 3000 : 10000;
-    var dataContext    = $(this).parents("form").eq(0); // set data context for calling form reset function
+    var dataContext    = $(this).closest('form'); // set data context for calling form reset function
     console.log("submit timer: " + isPhoneX() + resetTimer);
   
     // Contact info required - check it is not empty
@@ -324,12 +325,9 @@ $("form .submit").on('click', $(this), function() {
       $(this).parents("form").eq(0).fadeOut('fast', function() {
           $('.thank-you').fadeIn(400, function() {
             $(".thank-you").animate({opacity: .3}, 4000);
-
-            // .delay(resetTimer)contactReset.apply(dataContext, []); // reset form after set delay using specified data context 
-
+            // Reset form
             var windowFn = function() { contactReset.apply(dataContext, []) } // call reset function with data context // .apply executes code immediately; doesn't work with setTimeout so fore to put in function
             window.setTimeout(windowFn, resetTimer)  // reset form after set delay
-
           });
       });
       return false;
