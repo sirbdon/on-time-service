@@ -1,4 +1,4 @@
-var versionNumber = { version: 28 } // to reset file cache forefully on prod. Updated with shell script.
+versionNumber = { version: 29 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
