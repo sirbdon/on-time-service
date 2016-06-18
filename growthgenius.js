@@ -1,4 +1,4 @@
-var versionNumber = { version: 17 } // to reset file cache forefully on prod. Updated with shell script.
+var versionNumber = { version: 18 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -67,11 +67,12 @@ $(document).ready(function() {
 
   // Reset form (hide / show appropriate elements, reset values .reset(), etc)
   var contactReset = function() {
+    var htmlElement = $(this).get(0);
     console.log("contact reset $this:"); console.log($(this));
     $('.thank-you').fadeOut('fast')
     $('.thank-you').remove()
     $(this).find('.none1, .none0').hide() // $this refers to $('form') that envoked it.
-    $(this).reset() // reset this form. Need .get(0) to return html element (instead of $jQuery object)
+    htmlElement.reset() // reset this form. Need .get(0) to return html element (instead of $jQuery object)
     ( !$(this).hasClass('form-style-lower') ) ? $(this).find('input[name="message"]').eq(0).prop('style').width =  "20%" : null ; // only apply width styling to navbar form
     $(this).find('input[name="message"]').prop('placeholder', 'Type here...')
     $(this).find('input').prop('required', false)
@@ -295,7 +296,7 @@ $('input[name="contact-info"]').keypress(function(event){
 $("form .submit").on('click', $(this), function() {
     // Form reset timer shorter on phone screens
     var resetTimer = ( isPhoneX() ) ? 3000 : 10000;
-    var dataContext    = $(this).closest('form').get(0).removeAttribute('id').removeAttribute('_lpchecked') // set data context for calling form reset function
+    var dataContext    = $(this).closest('form').removeAttr('id').removeAttr('_lpchecked') // set data context for calling form reset function
     console.log("submit timer: " + isPhoneX() + resetTimer);
   
     // Contact info required - check it is not empty
