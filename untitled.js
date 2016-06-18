@@ -40,12 +40,6 @@ $("form .submit").on('mouseenter', $(this), function() {
 
     var formHtml = $(this).closest('form').get(0)
 
-
-    console.log(formHtml)
-    console.log(formHtml)
-
-      .removeAttr('id').removeAttr('_lpchecked') )
-
     formTest = $(this)
   })
 
