@@ -1,4 +1,4 @@
-var versionNumber = { version: 23 } // to reset file cache forefully on prod. Updated with shell script.
+var versionNumber = { version: 24 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -68,7 +68,6 @@ $(document).ready(function() {
   // Reset form (hide / show appropriate elements, reset values .reset(), etc)
   var contactReset = function() {
     for ( i = 0; i < document.forms.length; i++ ) { document.forms[i].reset(); } // reset all forms
-
     console.log("contact reset $this:"); console.log($(this))
     $('.thank-you').fadeOut('fast')
     $('.thank-you').remove()
@@ -295,8 +294,8 @@ $('input[name="contact-info"]').keypress(function(event){
 
 $("form .submit").on('click', $(this), function() {
     // Form reset timer shorter on phone screens
-    var resetTimer = ( isPhoneX() ) ? 3000 : 10000;
-    var dataContext    = $(this).closest('form').removeAttr('id').removeAttr('_lpchecked') // set data context for calling form reset function
+    var resetTimer  = ( isPhoneX() ) ? 3000 : 10000;
+    var dataContext = function() { return $(this).closest('form').removeAttr('id').removeAttr('_lpchecked'); } // set data context for calling form reset function
     console.log("submit timer: " + isPhoneX() + resetTimer);
   
     // Contact info required - check it is not empty
@@ -332,9 +331,9 @@ $("form .submit").on('click', $(this), function() {
           $('.thank-you').fadeIn(400, function() {
             $(".thank-you").animate({opacity: .3}, 4000);
             // Reset form
-            var windowFn = function() { return contactReset.apply(dataContext, []) } // call reset function with data context // .apply executes code immediately; doesn't work with setTimeout so fore to put in function
+            var windowFn = function() { return contactReset.apply(dataContext(), []) } // call reset function with data context // .apply executes code immediately; doesn't work with setTimeout so fore to put in function
             window.setTimeout(windowFn, resetTimer)  // reset form after set delay
-            console.log("data context: "); console.log(dataContext);
+            console.log("data context: "); console.log(dataContext());
           });
       });
       return false;
