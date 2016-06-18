@@ -1,4 +1,4 @@
-var versionNumber = { version: 8 } // to reset file cache forefully on prod. Updated with shell script.
+var versionNumber = { version: 1 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -30,19 +30,19 @@ $(document).ready(function() {
 
   // Fade out phone number info when on small phone screen 
   var whiteOnPhone = function() {
+    console.log("in whiteOnPhone");
     var opacity1 = Boolean( $('div.or-call').css('opacity') === "1"),
         opacity2 = Boolean( $('div.site-phone').css('opacity') === "1"),
         isPhone = isPhoneX();
-        console.log("whitephone vars (3x):" + " " + isPhone + " " + opacity1 + " " + opacity2);  
+        console.log("vars:" + " " + isPhone + " " + opacity1 + " " + opacity2);  
     if ( isPhone && opacity1 && opacity2 ) {
       console.log("set opacity to 0");
       $('div.or-call, div.site-phone').animate( { opacity: "0" }, 400 );
-    } 
-
-    if ( isPhone && !opacity1 && !opacity2 ) {
+    } else if ( isPhone && !opacity1 && !opacity2 ) {
       console.log("set opacity to 1");
       $('div.or-call, div.site-phone').animate( { opacity: "1" }, 400 );
     }
+    console.log("end of whiteOnPhone");
   }
 
   // Window location helpers -------------
@@ -67,7 +67,6 @@ $(document).ready(function() {
 
   // Reset form (hide / show appropriate elements, reset values .reset(), etc)
   var contactReset = function() {
-    console.log("contact reset $this:"); console.log($(this));
     $('.thank-you').fadeOut('fast')
     $('.thank-you').remove()
     $(this).find('.none1, .none0').hide() // $this refers to $('form') that envoked it.
@@ -331,9 +330,8 @@ $("form .submit").on('click', $(this), function() {
           $('.thank-you').fadeIn(400, function() {
             $(".thank-you").animate({opacity: .3}, 4000);
             // Reset form
-            var windowFn = function() { return contactReset.apply(dataContext, []) } // call reset function with data context // .apply executes code immediately; doesn't work with setTimeout so fore to put in function
+            var windowFn = function() { contactReset.apply(dataContext, []) } // call reset function with data context // .apply executes code immediately; doesn't work with setTimeout so fore to put in function
             window.setTimeout(windowFn, resetTimer)  // reset form after set delay
-            console.log("data context: "); console.log(dataContext);
           });
       });
       return false;
