@@ -1,4 +1,4 @@
-var versionNumber = { version: 25 } // to reset file cache forefully on prod. Updated with shell script.
+var versionNumber = { version: 26 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -87,19 +87,19 @@ $(document).ready(function() {
   }
 
   
-  var sendForm = function(formData) {
-    $.ajax({
-      url: "https://formspree.io/" + e + m + a + i + l + z, // "https://formspree.io/" + e + m + a + i + l + z,
-      method: "POST",
-      data: formData,
-      dataType: "json",
-      success: function (data, status, request) { 
-        console.log("Status: " + status + "\n Data: ");
-        console.log(data);
-      },
-      error: function (request, status, error) { alert(request.responseText); }
-    }); 
-  }
+  // var sendForm = function(formData) {
+  //   $.ajax({
+  //     url: "https://formspree.io/" + e + m + a + i + l + z, // "https://formspree.io/" + e + m + a + i + l + z,
+  //     method: "POST",
+  //     data: formData,
+  //     dataType: "json",
+  //     success: function (data, status, request) { 
+  //       console.log("Status: " + status + "\n Data: ");
+  //       console.log(data);
+  //     },
+  //     error: function (request, status, error) { alert(request.responseText); }
+  //   }); 
+  // }
 
 
 // ======= DEFINE 'GLOBAL' VARIABLES =======
@@ -257,11 +257,11 @@ if (currentPathX() === "") {
 
 // obfuscation
 var e = "lyn",
-  m = "de",
-  a = "ll@",
-  i = "tel",
-  l = "us.",
-  z = "net";
+    m = "de",
+    a = "ll@",
+    i = "tel",
+    l = "us.",
+    z = "net";
 
 // set formData variables
 var messageX = "",
