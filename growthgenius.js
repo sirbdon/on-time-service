@@ -1,4 +1,4 @@
-var versionNumber = { version: 21 } // to reset file cache forefully on prod. Updated with shell script.
+var versionNumber = { version: 22 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -70,7 +70,7 @@ $(document).ready(function() {
     console.log("contact reset $this:"); console.log($(this))
     $('.thank-you').fadeOut('fast')
     $('.thank-you').remove()
-    $(this).find('.none1, .none0').hide() // $this refers to $('form') that envoked it.
+    $(this).find('.none1, .none0').hide(); // $this refers to $('form') that envoked it.
     $(this).find('input[type="text"]').val("") // reset this form.
     ( !$(this).hasClass('form-style-lower') ) ? $(this).find('input[name="message"]').eq(0).prop('style').width =  "20%" : null ; // only apply width styling to navbar form
     $(this).find('input[name="message"]').prop('placeholder', 'Type here...')
