@@ -1,4 +1,4 @@
-var versionNumber = { version: 16 } // to reset file cache forefully on prod. Updated with shell script.
+var versionNumber = { version: 17 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -295,7 +295,7 @@ $('input[name="contact-info"]').keypress(function(event){
 $("form .submit").on('click', $(this), function() {
     // Form reset timer shorter on phone screens
     var resetTimer = ( isPhoneX() ) ? 3000 : 10000;
-    var dataContext    = $(this).closest('form').get(0).removeAttr('id').removeAttr('_lpchecked') // set data context for calling form reset function
+    var dataContext    = $(this).closest('form').get(0).removeAttribute('id').removeAttribute('_lpchecked') // set data context for calling form reset function
     console.log("submit timer: " + isPhoneX() + resetTimer);
   
     // Contact info required - check it is not empty
