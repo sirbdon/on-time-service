@@ -1,4 +1,4 @@
-versionNumber = { version: 29 } // to reset file cache forefully on prod. Updated with shell script.
+versionNumber = { version: 30 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -16,9 +16,37 @@ versionNumber = { version: 29 } // to reset file cache forefully on prod. Update
 //   }}();
 // </script>
 
+  // var allText = "";
+  // var lines = [];
+  // var currentVersion999 = '';
+  
+  // var txtFile = new XMLHttpRequest();
+  // txtFile.open("GET", "https://sirbdon.github.io/on-time-service/growthgenius.js", true);
+  // txtFile.onreadystatechange = function() {
+  //   if (txtFile.readyState === 4) {  // Makes sure the document is ready to parse.
+  //     if (txtFile.status === 200) {  // Makes sure it's found the file.
+  //       allText = txtFile.responseText;
+  //       lines = txtFile.responseText.split("\n"); // Will separate each line into an array
+  //       currentVersion999 = lines[0].slice(lines[0].indexOf('version: ') + 'version: '.length, lines[0].indexOf(' }'));
+  //     }
+  //   }
+  // }
+  // txtFile.send(null);
+
+var sourceUrl = function() { return 'https://sirbdon.github.io/on-time-service/growthgenius.js?v=' + currentVersion999; }
+
+while (!currentVersion999) { setTimeout(sourceUrl(),50); }
+
+if (currentVersion999) {  
+var growthgeniusJs = document.createElement('script');
+growthgeniusJs.setAttribute('src', sourceUrl);
+growthgeniusJs.setAttribute('async', true);
+document.head.insertBefore(growthgeniusJs, document.head.getElementsByTagName('script')[0]);
+} else { sourceUrl() }
 
 
-$(document).ready(function() {
+
+$(document).load(function() {
 
 
 // ======= HELPER FUNCTIONS: =======
