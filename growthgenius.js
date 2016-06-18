@@ -1,4 +1,4 @@
-versionNumber = { version: 30 } // to reset file cache forefully on prod. Updated with shell script.
+versionNumber = { version: 31 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -33,16 +33,16 @@ versionNumber = { version: 30 } // to reset file cache forefully on prod. Update
   // }
   // txtFile.send(null);
 
-var sourceUrl = function() { return 'https://sirbdon.github.io/on-time-service/growthgenius.js?v=' + currentVersion999; }
+// var sourceUrl = function() { return 'https://sirbdon.github.io/on-time-service/growthgenius.js?v=' + currentVersion999; }
 
-while (!currentVersion999) { setTimeout(sourceUrl(),50); }
+// while (!currentVersion999) { setTimeout(sourceUrl(),50); }
 
-if (currentVersion999) {  
-var growthgeniusJs = document.createElement('script');
-growthgeniusJs.setAttribute('src', sourceUrl);
-growthgeniusJs.setAttribute('async', true);
-document.head.insertBefore(growthgeniusJs, document.head.getElementsByTagName('script')[0]);
-} else { sourceUrl() }
+// if (currentVersion999) {  
+// var growthgeniusJs = document.createElement('script');
+// growthgeniusJs.setAttribute('src', sourceUrl);
+// growthgeniusJs.setAttribute('async', true);
+// document.head.insertBefore(growthgeniusJs, document.head.getElementsByTagName('script')[0]);
+// } else { sourceUrl() }
 
 
 
