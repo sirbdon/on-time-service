@@ -1,4 +1,4 @@
-var versionNumber = { version: 23 } // to reset file cache forefully on prod. Updated with shell script.
+var versionNumber = { version: 24 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
 
   // Reset form (hide / show appropriate elements, reset values .reset(), etc)
   var contactReset = function() {
-    for ( i = 0; i < document.forms.length; 1++ ) { document.forms[i].reset() } // reset all forms
+    for ( i = 0; i < document.forms.length; i++ ) { document.forms[i].reset(); } // reset all forms
 
     console.log("contact reset $this:"); console.log($(this))
     $('.thank-you').fadeOut('fast')
