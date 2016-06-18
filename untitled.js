@@ -9,8 +9,8 @@ var contactReset = function() {
     $('.thank-you').fadeOut('fast')
     $('.thank-you').remove()
     $(this).find('.none1, .none0').hide() // $this refers to $('form') that envoked it.
-    $(this)[0].reset() // reset this form. Need [0] so data is sent to 'reset' in proper format.
-    ( !$(this).hasClass('form-style-lower') ) ? $(this).find('input[name="message"]').eq(0).prop('style').width =  "20%"; : return; // only apply width styling to navbar form
+    $(this).get(0).reset() // reset this form. Need  so data is sent to 'reset' in proper format.
+    ( !$(this).hasClass('form-style-lower') ) ? $(this).find('input[name="message"]').eq(0).prop('style').width =  "20%" : null; // only apply width styling to navbar form
     $(this).find('input[name="message"]').prop('placeholder', 'Type here...')
     $(this).find('input').prop('required', false)
     $(this).fadeIn('fast')
