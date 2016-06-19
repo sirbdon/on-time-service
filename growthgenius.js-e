@@ -1,4 +1,4 @@
-versionNumber = { version: 32 } // to reset file cache forefully on prod. Updated with shell script.
+versionNumber = { version: 33 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -199,12 +199,17 @@ $(document).ready(function() {
   // Insert form at bottom of landing page
   if ( currentPathX() === '' ) { $('div.sqs-block-content h3.text-align-center').eq(1).before(formHtml) }
 
-  // Insert on other pages
-  if ( currentPathX() !== '' ) { $('div.sqs-block-content p.text-align-center').eq(1).before(formHtml) }
+  // Insert on other pages: locations had slightly different syntax and no insert on about-us at all
+  if ( currentPathX() !== '' && currentPathX() !== 'about-us' && !== 'locations' ) { $('div.sqs-block-content p.text-align-center').eq(1).before(formHtml) }
+  if ( currentPathX() !== '' && currentPathX() !== 'about-us' && === 'locations') { $('div#canvas div.sqs-layout.sqs-grid-12 div.row.sqs-row div.col.sqs-col-12').prepend(formHtml).after('<p>placeholder for email in a few lines</p>') }
 
   // Form updates that work on all pages
   $('div.site-address').eq(1).wrap(bottomHtmlWrap).after('<br><div>or e-mail:</div>');
   $('div.site-address form').eq(1).addClass('form-style-lower');
+
+  // Create email footer text so it's consistent with landing page (and larger), then insert into right spot
+  var emailFooterEm = '<h3 class="text-align-center"><strong><a target="_blank" href="mailto:info@ontimeserviceco.com">info@ontimeserviceco.com </a></strong></h3>'
+  $('div.sqs-block-content h3.text-align-center').next().replaceWith(emailFooterEm)
 
 
   // ----
