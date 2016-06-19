@@ -1,4 +1,4 @@
-versionNumber = { version: 34 } // to reset file cache forefully on prod. Updated with shell script.
+versionNumber = { version: 35 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -201,7 +201,7 @@ $(document).ready(function() {
 
   // Insert on other pages: locations had slightly different syntax and no insert on about-us at all
   if ( currentPathX() !== '' && currentPathX() !== 'about-us' && currentPathX() !== 'locations' ) { $('div.sqs-block-content p.text-align-center').eq(1).before(formHtml) }
-  if ( currentPathX() !== '' && currentPathX() !== 'about-us' && currentPathX() === 'locations') { $('div#canvas div.sqs-layout.sqs-grid-12 div.row.sqs-row div.col.sqs-col-12').prepend(formHtml).after('<p>placeholder for email in a few lines</p>') }
+  if ( currentPathX() !== '' && currentPathX() !== 'about-us' && currentPathX() === 'locations') { $('div#canvas div.sqs-layout.sqs-grid-12 div.row.sqs-row div.col.sqs-col-12').eq(1).prepend(formHtml).after('<p>placeholder for email in a few lines</p>') }
 
   // Form updates that work on all pages
   $('div.site-address').eq(1).wrap(bottomHtmlWrap).after('<br><div>or e-mail:</div>');
