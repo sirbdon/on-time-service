@@ -1,4 +1,4 @@
-versionNumber = { version: 43 } 
+versionNumber = { version: 44 } 
 
 $(document).ready(function() {
 
@@ -145,7 +145,7 @@ $(document).ready(function() {
 
   // ----
   // Prepare addition HTML for form at bottom
-  var bottomHtmlWrap = '<h3 class="text-align-center"></h3>',
+  var bottomHtmlWrap = ( currentPathX() === '' ) ? '<h3 class="text-align-center"></h3>' : '<h4 class="text-align-center"></h4>',
       locationWrap   = '<div class="sqs-block html-block sqs-block-html" data-block-type="2"><div class="sqs-block-content"></div></div>';
 
   // Location page is different, so put elements in to make referencing the same as others
@@ -159,12 +159,12 @@ $(document).ready(function() {
   // if ( currentPathX() !== '' && currentPathX() !== 'about-us' && currentPathX() === 'locations') { .prepend(formHtml).parent() }
 
   // Form updates that work on all pages
-  $('div.site-address').eq(1).wrap(bottomHtmlWrap).after('<br><div>or e-mail:</div>');
+  $('div.site-address').eq(1).wrap(bottomHtmlWrap).after('<br><div>or by e-mail:</div>');
   $('div.site-address form').eq(1).addClass('form-style-lower');
 
-  // Create email footer text so it's consistent with landing page (and larger), then insert into right spot
-  var emailFooterEm = '<h3 class="text-align-center"><strong><a target="_blank" href="mailto:info@ontimeserviceco.com">info@ontimeserviceco.com </a></strong></h3>'
-  if ( currentPathX() !== '' ) { $('div.sqs-block-content h3.text-align-center').next().replaceWith(emailFooterEm) }
+  // Create email footer text so it's consistent with landing page, then insert into right spot on other pages
+  var emailFooterEm = '<h4 class="text-align-center"><strong><a target="_blank" href="mailto:info@ontimeserviceco.com">info@ontimeserviceco.com </a></strong></h4>'
+  if ( currentPathX() !== '' ) { $('div.sqs-block-content h4.text-align-center').next().replaceWith(emailFooterEm) }
     
 
   // ----
