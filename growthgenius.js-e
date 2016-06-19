@@ -1,4 +1,4 @@
-versionNumber = { version: 41 } 
+versionNumber = { version: 40 } 
 
 $(document).ready(function() {
 
