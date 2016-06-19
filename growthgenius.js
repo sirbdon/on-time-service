@@ -1,4 +1,4 @@
-versionNumber = { version: 32 } // to reset file cache forefully on prod. Updated with shell script.
+versionNumber = { version: 33 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -134,7 +134,7 @@ $(document).ready(function() {
   // }
 
 
-// ======= DEFINE 'GLOBAL' VARIABLES =======
+// ======= DEFINE 'DOC-GLOBAL' VARIABLES =======
   var timeSent = "";
 
 
@@ -188,7 +188,7 @@ $(document).ready(function() {
   // Set HTML for "OR" to be placed in middle, visible on small phone screens (comment OR call)
   var orCall = '<div class="site-city-state or-call">or:</div>'
 
-  // $('div.site-city-state').remove();
+  // $('div.site-city-state') replace
   $('div.site-city-state').replaceWith(orCall); 
 
 
@@ -196,8 +196,13 @@ $(document).ready(function() {
   // Prepare addition HTML for form at bottom
   var bottomHtmlWrap = '<h3 class="text-align-center"></h3>'
 
-  // Insert form at bottome
-  $('div.sqs-block-content h3.text-align-center').eq(1).before(formHtml);
+  // Insert form at bottom of landing page
+  if ( currentPathX() === '' ) { $('div.sqs-block-content h3.text-align-center').eq(1).before(formHtml) }
+
+  // Insert on other pages
+  if ( currentPathX() !== '' ) { $('div.sqs-block-content p.text-align-center').eq(1).before(formHtml) }
+
+  // Form updates that work on all pages
   $('div.site-address').eq(1).wrap(bottomHtmlWrap).after('<br><div>or e-mail:</div>');
   $('div.site-address form').eq(1).addClass('form-style-lower');
 
