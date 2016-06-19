@@ -192,28 +192,28 @@ $(document).ready(function() {
   $('div.site-city-state').replaceWith(orCall); 
 
 
-  // // ----
-  // // Prepare addition HTML for form at bottom
-  // var bottomHtmlWrap = '<h3 class="text-align-center"></h3>',
-  //     locationWrap   = '<div class="sqs-block html-block sqs-block-html" data-block-type="2"><div class="sqs-block-content"></div></div>'
+  // ----
+  // Prepare addition HTML for form at bottom
+  var bottomHtmlWrap = '<h3 class="text-align-center"></h3>',
+      locationWrap   = '<div class="sqs-block html-block sqs-block-html" data-block-type="2"><div class="sqs-block-content"></div></div>';
 
-  // // Location page is different, so put elements in to make referencing the same as others
-  // if ( currentPathX() === 'locations' ) { $('div#canvas div.sqs-layout.sqs-grid-12 div.row.sqs-row div.col.sqs-col-12').eq(1).prepend(locationWrap).append('<p class="text-align-center">email placeholder</p>') }
+  // Location page is different, so put elements in to make referencing the same as others
+  if ( currentPathX() === 'locations' ) { $('div#canvas div.sqs-layout.sqs-grid-12 div.row.sqs-row div.col.sqs-col-12').eq(1).prepend(locationWrap).parent().find('div.sqs-block-content').prepend('<p class="text-align-center">email placeholder</p>') }
 
-  // // Insert form at bottom of landing page
-  // if ( currentPathX() === '' ) { $('div.sqs-block-content h3.text-align-center').eq(1).before(formHtml) }
+  // Insert form at bottom of landing page
+  if ( currentPathX() === '' ) { $('div.sqs-block-content h3.text-align-center').eq(1).before(formHtml) }
 
-  // // Insert on other pages: locations had slightly different syntax and no insert on about-us at all
-  // if ( currentPathX() !== '' && currentPathX() !== 'about-us' ) { $('div.sqs-block-content p.text-align-center').eq(1).before(formHtml) }
-  // // if ( currentPathX() !== '' && currentPathX() !== 'about-us' && currentPathX() === 'locations') { .prepend(formHtml).parent() }
+  // Insert on other pages: locations had slightly different syntax and no insert on about-us at all
+  if ( currentPathX() !== '' && currentPathX() !== 'about-us' ) { $('div.sqs-block-content p.text-align-center').eq(1).before(formHtml) }
+  // if ( currentPathX() !== '' && currentPathX() !== 'about-us' && currentPathX() === 'locations') { .prepend(formHtml).parent() }
 
-  // // Form updates that work on all pages
-  // $('div.site-address').eq(1).wrap(bottomHtmlWrap).after('<br><div>or e-mail:</div>');
-  // $('div.site-address form').eq(1).addClass('form-style-lower');
+  // Form updates that work on all pages
+  $('div.site-address').eq(1).wrap(bottomHtmlWrap).after('<br><div>or e-mail:</div>');
+  $('div.site-address form').eq(1).addClass('form-style-lower');
 
-  // // Create email footer text so it's consistent with landing page (and larger), then insert into right spot
-  // var emailFooterEm = '<h3 class="text-align-center"><strong><a target="_blank" href="mailto:info@ontimeserviceco.com">info@ontimeserviceco.com </a></strong></h3>'
-  // $('div.sqs-block-content h3.text-align-center').next().replaceWith(emailFooterEm)
+  // Create email footer text so it's consistent with landing page (and larger), then insert into right spot
+  var emailFooterEm = '<h3 class="text-align-center"><strong><a target="_blank" href="mailto:info@ontimeserviceco.com">info@ontimeserviceco.com </a></strong></h3>'
+  $('div.sqs-block-content h3.text-align-center').next().replaceWith(emailFooterEm)
 
 
   // ----
