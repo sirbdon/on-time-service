@@ -1,4 +1,4 @@
-versionNumber = { version: 37 } // to reset file cache forefully on prod. Updated with shell script.
+versionNumber = { version: 38 } // to reset file cache forefully on prod. Updated with shell script.
 
 // // For reference, load in SquareSpace directly
 
@@ -198,8 +198,7 @@ $(document).ready(function() {
       locationWrap   = '<div class="sqs-block html-block sqs-block-html" data-block-type="2"><div class="sqs-block-content"></div></div>'
 
   // Location page is different, so put elements in to make referencing the same as others
-  $('div#canvas div.sqs-layout.sqs-grid-12 div.row.sqs-row div.col.sqs-col-12').eq(1).prepend(locationWrap).append('<p class="text-align-center">email placeholder</p>')
-
+  if ( currentPathX() === 'locations' ) { $('div#canvas div.sqs-layout.sqs-grid-12 div.row.sqs-row div.col.sqs-col-12').eq(1).prepend(locationWrap).append('<p class="text-align-center">email placeholder</p>') }
 
   // Insert form at bottom of landing page
   if ( currentPathX() === '' ) { $('div.sqs-block-content h3.text-align-center').eq(1).before(formHtml) }
