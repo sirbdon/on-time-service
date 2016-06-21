@@ -1,4 +1,4 @@
-versionNumber = { version: 44 } 
+versionNumber = { version: 45 } 
 
 $(document).ready(function() {
 
@@ -132,7 +132,8 @@ $(document).ready(function() {
   // Insert form at top
   $('div.site-address:contains("info@ontimeserviceco.com")').replaceWith(formHtml);
   $('div.site-address').addClass('phonex');
-  $('form').eq(1).find('input[name="_cc"]').val(atob('YnBpenphQGdtYWlsLmNvbQ==')); // Obfuscate email
+  // $('form').find('input[name="_cc"]').each(function() { console.log( $(this).val(atob('YnBpenphQGdtYWlsLmNvbQ==')) ); } ) // Obfuscate email
+  // $('form').eq(1).find('input[name="_cc"]').val(atob('YnBpenphQGdtYWlsLmNvbQ==')); 
 
 
   // ----
@@ -303,7 +304,7 @@ $("form .submit").on('click', $(this), function() {
           contact: $(this).parent().find('input[name="contact-info"]').val(),
           page: ( currentPathX() ) ? currentPathX() : "Homepage",
           time: ( thisMoment() ) ? thisMoment() : "N/A",
-          _cc: $(this).parent().find('input[name="_cc"]').val(),
+          _cc: atob('YnBpenphQGdtYWlsLmNvbQ=='), // Obfuscate email
           _subject: $(this).parent().find('input[name="_subject"]').val(),
           _gotcha: $(this).parent().find('input[name="_gotcha"]').val()
         };
