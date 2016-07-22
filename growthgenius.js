@@ -341,10 +341,10 @@ $("form .submit").on('click', $(this), function() {
                       Head Workshop Location:\
                     </h3>\
                     <p style="font-size:16px;margin-top: 3%;margin-bottom: -2%;margin-left:auto;margin-right:auto;text-align:center;">\
-                      Walk-Ins Welcome!\
+                      Walk-Ins Welcome - Free Parking Available\
                     </p>\
                     <p id="location-workshop" style="font-size:18px;margin-top: 3%;margin-bottom: -3%;margin-left:auto;margin-right:auto;text-align:center;">\
-                      <a href="https://goo.gl/maps/8dY4czc1xY52" style="text-decoration:underline;">\
+                      <a href="https://goo.gl/maps/8dY4czc1xY52" target="_blank" style="text-decoration:underline;">\
                         1899 Willingdon Ave\
                         </br>\
                         Burnaby, BC\
