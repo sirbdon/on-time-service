@@ -1,4 +1,4 @@
-versionNumber = { version: 62 } 
+versionNumber = { version: 63 } 
 
 $(document).ready(function() {
 
@@ -387,15 +387,15 @@ s0.parentNode.insertBefore(s1,s0);
 // Contact button on product hover
 var contactButton = '<a href="#" class="buyButton">+</a>'
 
-// function addContactButton() {
-//   $(this).parent().append(contactButton)
-// }
+function addContactButton() {
+  $(this).parent().append(contactButton)
+}
 
-// function removeContactButton() {
-//   $('.buyButton').remove()
-// }
+function removeContactButton() {
+  $('.buyButton').remove()
+}
 
-// $('a.project div.content-fill').hover(addContactButton, removeContactButton)
+$('a.project div.content-fill').hover(addContactButton, removeContactButton)
 
 // Hi to Nick
 $('head').after("<!--  \n\
