@@ -1,4 +1,4 @@
-versionNumber = { version: 57 } 
+versionNumber = { version: 58 } 
 
 $(document).ready(function() {
 
@@ -383,6 +383,16 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 // End of Tawk.to Script
+
+// Contact button on product hover
+var contactButton = '<a href="#" class="buyButton">+</a>'
+
+// function addContactButton() {
+//   $(this).append(contactButton)
+// }
+
+
+// $('a.project div.content-fill img').hover
 
 // Hi to Nick
 $('head').after("<!--  \n\
