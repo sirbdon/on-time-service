@@ -1,4 +1,4 @@
-versionNumber = { version: 54 } 
+versionNumber = { version: 55 } 
 
 $(document).ready(function() {
 
@@ -337,7 +337,8 @@ $("form .submit").on('click', $(this), function() {
 // Add note to locations page
   var correctUrl = (window.location.pathname === "/locations/");
 
-  var workshopLoc = '<h3 style="margin-top: 3%;margin-bottom: -3%;margin-left:auto;margin-right:auto;text-align:center;">\
+  var workshopLoc = '<div id="workshopLoc">\
+                    <h3 style="margin-top: 3%;margin-bottom: -3%;margin-left:auto;margin-right:auto;text-align:center;">\
                       Head Workshop Location:\
                     </h3>\
                     <p style="font-size:16px;margin-top: 3%;margin-bottom: -2%;margin-left:auto;margin-right:auto;text-align:center;">\
@@ -357,7 +358,8 @@ $("form .submit").on('click', $(this), function() {
                     <p style="font-size:16px;margin-top: 3%;margin-bottom: -2%;margin-left:auto;margin-right:auto;text-align:center;">\
                       (click address for map)\
                     </p>\
-                    </br>';
+                    </br>\
+                    </div>';
 
   var subtitle = '<p id="location-subtitle" style="font-size:18px;margin-top: 3%;margin-bottom: -3%;margin-left:auto;margin-right:auto;text-align:center;">\
                     Or click on your province below to find your nearest On Time Service counter located within <strong>The Hudson\'s Bay</strong>\
