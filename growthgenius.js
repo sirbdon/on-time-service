@@ -1,4 +1,4 @@
-versionNumber = { version: 73 } 
+versionNumber = { version: 74 } 
 
 $(document).ready(function() {
 
@@ -402,6 +402,7 @@ $('a.project div.content-fill').hover(addContactButton, removeContactButton);
 $('.buyButton').hover(function(){}, removeContactButton);
 
 $('a.buyButton').click(function() {
+  $('#tawkchat-minified-wrapper').click()
   $('#tawkchat-minified-container').click()
 })
 
