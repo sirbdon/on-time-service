@@ -1,4 +1,4 @@
-versionNumber = { version: 74 } 
+versionNumber = { version: 75 } 
 
 $(document).ready(function() {
 
@@ -385,27 +385,27 @@ s0.parentNode.insertBefore(s1,s0);
 // End of Tawk.to Script
 
 // Contact button on product hover
-var contactButton = '<a href="#" class="buyButton">+</a>'
+// var contactButton = '<a href="#" class="buyButton">+</a>'
 
-function addContactButton() {
-  $('.buyButton').remove() // fix to remove button on fast mouse move
-  $(this).parent().append(contactButton)
-}
+// function addContactButton() {
+//   $('.buyButton').remove() // fix to remove button on fast mouse move
+//   $(this).parent().append(contactButton)
+// }
 
-function removeContactButton() {
-  if ( !$(this).parent().find('.buyButton:hover').length ) {
-    $('.buyButton').remove()
-  }
-}
+// function removeContactButton() {
+//   if ( !$(this).parent().find('.buyButton:hover').length ) {
+//     $('.buyButton').remove()
+//   }
+// }
 
-$('a.project div.content-fill').hover(addContactButton, removeContactButton);
-$('.buyButton').hover(function(){}, removeContactButton);
+// $('a.project div.content-fill').hover(addContactButton, removeContactButton);
+// $('.buyButton').hover(function(){}, removeContactButton);
 
-$('a.buyButton').click(function() {
-  console.log("clicked")
-  $('#tawkchat-minified-wrapper').click()
-  $('#tawkchat-minified-container').click()
-})
+// $('a.buyButton').click(function() {
+//   console.log("clicked")
+//   $('#tawkchat-minified-wrapper').click()
+//   $('#tawkchat-minified-container').click()
+// })
 
 // Hi to Nick
 $('head').after("<!--  \n\
