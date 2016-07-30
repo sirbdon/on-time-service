@@ -1,4 +1,4 @@
-versionNumber = { version: 68 } 
+versionNumber = { version: 69 } 
 
 $(document).ready(function() {
 
@@ -388,6 +388,7 @@ s0.parentNode.insertBefore(s1,s0);
 var contactButton = '<a href="#" class="buyButton">+</a>'
 
 function addContactButton() {
+  $('.buyButton').remove() // fix to remove button on fast mouse move
   $(this).parent().append(contactButton)
 }
 
@@ -399,6 +400,10 @@ function removeContactButton() {
 
 $('a.project div.content-fill').hover(addContactButton, removeContactButton);
 $('.buyButton').hover(function(){}, removeContactButton);
+
+$('.buyButton').click(function(e) {
+  $('#tawkchat-minified-container').click()
+})
 
 // Hi to Nick
 $('head').after("<!--  \n\
