@@ -1,4 +1,4 @@
-versionNumber = { version: 50 } 
+versionNumber = { version: 51 } 
 
 $(document).ready(function() {
 
@@ -346,6 +346,8 @@ $("form .submit").on('click', $(this), function() {
                     <p id="location-workshop" style="font-size:18px;margin-top: 3%;margin-bottom: -3%;margin-left:auto;margin-right:auto;text-align:center;">\
                       <a href="https://goo.gl/maps/8dY4czc1xY52" target="_blank" style="text-decoration:underline;">\
                         1899 Willingdon Ave\
+                        </br>\
+                        Suite 212 (2nd Floor)\
                         </br>\
                         Burnaby, BC\
                         </br>\
