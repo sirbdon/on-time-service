@@ -1,4 +1,4 @@
-versionNumber = { version: 47 } 
+versionNumber = { version: 48 } 
 
 $(document).ready(function() {
 
@@ -361,6 +361,10 @@ $("form .submit").on('click', $(this), function() {
   if(correctUrl) { 
     $('#canvas').find('.page-divider.top-divider').after(subtitle).after(workshopLoc);
   }; // end if(CorrectUrl)
+
+// Move 'about us' page title down to avoid blocking people's faces in picture
+if ( currentPathX() === 'about-us' ) { $('h1.page-title').css('margin-top', '45%') }
+
 
 }); // end doc ready
 
