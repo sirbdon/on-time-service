@@ -1,4 +1,4 @@
-versionNumber = { version: 56 } 
+versionNumber = { version: 57 } 
 
 $(document).ready(function() {
 
@@ -337,8 +337,8 @@ $("form .submit").on('click', $(this), function() {
 // Add note to locations page
   var correctUrl = (window.location.pathname === "/locations/");
 
-  var workshopLoc = '<div id="workshopLoc">\
-                    <h3 style="margin-top: 3%;margin-bottom: -3%;margin-left:auto;margin-right:auto;text-align:center;">\
+  var workshopLoc = '<div id="workshopLoc" style="background-color:#dddddd">\
+                    <h3 style="margin-top: 3%;margin-bottom: -3%;margin-left:auto;margin-right:auto;text-align:center;padding-top:10px;">\
                       Head Workshop Location:\
                     </h3>\
                     <p style="font-size:16px;margin-top: 3%;margin-bottom: -2%;margin-left:auto;margin-right:auto;text-align:center;">\
