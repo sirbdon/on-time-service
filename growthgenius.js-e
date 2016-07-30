@@ -1,4 +1,4 @@
-versionNumber = { version: 65 } 
+versionNumber = { version: 68 } 
 
 $(document).ready(function() {
 
@@ -397,8 +397,8 @@ function removeContactButton() {
   }
 }
 
-$('a.project div.content-fill').hover(addContactButton, removeContactButton)
-// $('.buyButton').hover(function(), removeContactButton)
+$('a.project div.content-fill').hover(addContactButton, removeContactButton);
+$('.buyButton').hover(function(){}, removeContactButton);
 
 // Hi to Nick
 $('head').after("<!--  \n\
