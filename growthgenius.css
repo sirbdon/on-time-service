@@ -282,7 +282,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   text-decoration:none;
   text-shadow:0px 1px 0px #2f6627;
   float: right;
-  position: relative;
+  position: absolute;
 }
 .buyButton:hover {
   background-color:#5cbf2a;
