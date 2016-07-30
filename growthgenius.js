@@ -1,4 +1,4 @@
-versionNumber = { version: 76 } 
+versionNumber = { version: 77 } 
 
 $(document).ready(function() {
 
@@ -406,6 +406,14 @@ s0.parentNode.insertBefore(s1,s0);
 //   $('#tawkchat-minified-wrapper').click()
 //   $('#tawkchat-minified-container').click()
 // })
+
+// Fit nav bar on smaller screen
+$(window).resize(function() {
+  if ( $(document).width() <= 1033 ) { $('a[href="/products/"]').html("Other") }
+  if ( $(document).width() > 1033 ) { $('a[href="/products/"]').html("Other Products & Services") }
+})
+
+
 
 // Hi to Nick
 $('head').after("<!--  \n\
