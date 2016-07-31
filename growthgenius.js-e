@@ -1,4 +1,4 @@
-versionNumber = { version: 97 } 
+versionNumber = { version: 98 } 
 
 $(document).ready(function() {
 
@@ -465,13 +465,13 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
     <img src="http://i.imgur.com/7Er7Fhv.png" style="height:310px">\
   </div>\
   <div class="col-md-8 pull-right">\
-    <h3>Complete watch servicing, from full rebuilds and technical revisions all the way down to battery replacement and ultrasonic cleaning.</h3>\
+    <p class="homeDetails">Complete watch servicing, from full rebuilds and technical revisions all the way down to battery replacement and ultrasonic cleaning.</p>\
   </div>\
   <div class="col-md-8 pull-right">\
-    <h3>Anything you can imagine we can do with jewellery. From completely custom build rings, converting heirlooms into a modern brooch all the way to chain repairs, ring sizing, and chain soldering.<h3>\
+    <p class="homeDetails">Anything you can imagine we can do with jewellery. From completely custom build rings, converting heirlooms into a modern brooch all the way to chain repairs, ring sizing, and chain soldering.<p>\
   </div>\
   <div class="col-md-8 pull-right">\
-    <h3>A large variety of accessories and other services are also available. We\'re confident we can meet any of your watch and jewellery desires. Please reach out using the form at the top or at the email below.</h3>\
+    <p class="homeDetails">A large variety of accessories and other services are also available. We\'re confident we can meet any of your watch and jewellery desires. Please reach out using the form at the top or at the email below.</p>\
   </div>\
 </div>\
 </div>'

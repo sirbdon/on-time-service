@@ -2,6 +2,10 @@
   margin-bottom: 40px;
 }
 
+.homeDetails {
+  font-size: 26px !important;
+}
+
 .form-style input[type=submit],
 .form-style input[type=button],
 .form-next,
