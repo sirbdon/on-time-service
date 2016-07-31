@@ -1,4 +1,4 @@
-versionNumber = { version: 98 } 
+versionNumber = { version: 99 } 
 
 $(document).ready(function() {
 
@@ -422,10 +422,13 @@ s0.parentNode.insertBefore(s1,s0);
 //   $('#tawkchat-minified-container').click()
 // })
 
-// Fit nav bar on smaller screen
+// Functions to execute on window resize
 $(window).resize(function() {
+  // Fit nav bar on smaller screen
   if ( $(document).width() <= 1033 ) { $('a[href="/products/"]').html("Other") }
   if ( $(document).width() > 1033 ) { $('a[href="/products/"]').html("Other Products & Services") }
+  if ( $(document).width() <= 992 ) { $('#homeDetailsWatch').hide() }
+  if ( $(document).width() > 992 ) { $('#homeDetailsWatch').show() }
 })
 
 
@@ -462,7 +465,7 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 </div>\
 <div class="row" style="text-align:left">\
   <div class="col-md-4 pull-left hidden-xs hidden-sm">\
-    <img src="http://i.imgur.com/7Er7Fhv.png" style="height:310px">\
+    <img id="homeDetailsWatch" src="http://i.imgur.com/7Er7Fhv.png" style="height:310px">\
   </div>\
   <div class="col-md-8 pull-right">\
     <p class="homeDetails">Complete watch servicing, from full rebuilds and technical revisions all the way down to battery replacement and ultrasonic cleaning.</p>\

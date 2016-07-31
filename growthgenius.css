@@ -3,7 +3,8 @@
 }
 
 .homeDetails {
-  font-size: 26px !important;
+  font-size: 20px !important;
+  padding-right: 15px !important;
 }
 
 .form-style input[type=submit],
