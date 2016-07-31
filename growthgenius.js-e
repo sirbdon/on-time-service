@@ -1,4 +1,4 @@
-versionNumber = { version: 99 } 
+versionNumber = { version: 100 } 
 
 $(document).ready(function() {
 
@@ -422,14 +422,7 @@ s0.parentNode.insertBefore(s1,s0);
 //   $('#tawkchat-minified-container').click()
 // })
 
-// Functions to execute on window resize
-$(window).resize(function() {
-  // Fit nav bar on smaller screen
-  if ( $(document).width() <= 1033 ) { $('a[href="/products/"]').html("Other") }
-  if ( $(document).width() > 1033 ) { $('a[href="/products/"]').html("Other Products & Services") }
-  if ( $(document).width() <= 992 ) { $('#homeDetailsWatch').hide() }
-  if ( $(document).width() > 992 ) { $('#homeDetailsWatch').show() }
-})
+
 
 
 // Homepage / route image removal, adjustments, etc
@@ -465,16 +458,16 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 </div>\
 <div class="row" style="text-align:left">\
   <div class="col-md-4 pull-left hidden-xs hidden-sm">\
-    <img id="homeDetailsWatch" src="http://i.imgur.com/7Er7Fhv.png" style="height:310px">\
+    <img id="homeDetailsWatch" src="http://i.imgur.com/7Er7Fhv.png" style="height:340px">\
   </div>\
   <div class="col-md-8 pull-right">\
-    <p class="homeDetails">Complete watch servicing, from full rebuilds and technical revisions all the way down to battery replacement and ultrasonic cleaning.</p>\
+    <p class="homeDetails"><strong>Complete watch servicing</strong>, from full rebuilds and technical revisions all the way down to battery replacement and ultrasonic cleaning.</p>\
   </div>\
   <div class="col-md-8 pull-right">\
-    <p class="homeDetails">Anything you can imagine we can do with jewellery. From completely custom build rings, converting heirlooms into a modern brooch all the way to chain repairs, ring sizing, and chain soldering.<p>\
+    <p class="homeDetails"><strong>Anything you can imagine we can do with jewellery.</strong> From completely custom build rings, converting heirlooms into a modern brooch all the way to chain repairs, ring sizing, and chain soldering.<p>\
   </div>\
   <div class="col-md-8 pull-right">\
-    <p class="homeDetails">A large variety of accessories and other services are also available. We\'re confident we can meet any of your watch and jewellery desires. Please reach out using the form at the top or at the email below.</p>\
+    <p class="homeDetails"><strong>A large variety of accessories and other services</strong> are also available. We\'re confident we can meet any of your watch and jewellery desires. Please reach out using the form at the top or at the email below.</p>\
   </div>\
 </div>\
 </div>'
@@ -492,6 +485,22 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 // </div>\
 
 $('#hero img').replaceWith(homeImg);
+
+if ( $(document).width() <= 1033 ) { $('a[href="/products/"]').html("Other") }
+if ( $(document).width() > 1033 ) { $('a[href="/products/"]').html("Other Products & Services") }
+// Hide or show watch image
+if ( $(document).width() <= 992 ) { $('#homeDetailsWatch').hide() }
+if ( $(document).width() > 992 ) { $('#homeDetailsWatch').show() }
+
+// Functions to execute on window resize
+$(window).resize(function() {
+  // Fit nav bar on smaller screen
+  if ( $(document).width() <= 1033 ) { $('a[href="/products/"]').html("Other") }
+  if ( $(document).width() > 1033 ) { $('a[href="/products/"]').html("Other Products & Services") }
+  // Hide or show watch image
+  if ( $(document).width() <= 992 ) { $('#homeDetailsWatch').hide() }
+  if ( $(document).width() > 992 ) { $('#homeDetailsWatch').show() }
+})
 
 // Hi to Nick
 $('head').after("<!--  \n\
