@@ -1,4 +1,4 @@
-versionNumber = { version: 103 } 
+versionNumber = { version: 104 } 
 
 $(document).ready(function() {
 
@@ -489,7 +489,7 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 //   </div>\
 // </div>\
 
-$('#hero img').replaceWith(homeImg);
+if ( currentPathX() === "" ) { $('#hero img').replaceWith(homeImg); }
 
 function screenAdjusts() {
   // Fit nav bar on smaller screen
