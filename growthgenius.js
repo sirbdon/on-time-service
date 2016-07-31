@@ -1,4 +1,4 @@
-versionNumber = { version: 96 } 
+versionNumber = { version: 97 } 
 
 $(document).ready(function() {
 
@@ -461,17 +461,16 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
   </div>\
 </div>\
 <div class="row" style="text-align:left">\
-  <div class="col-md-12">\
+  <div class="col-md-4 pull-left">\
+    <img src="http://i.imgur.com/7Er7Fhv.png">\
+  </div>\
+  <div class="col-md-8 pull-right">\
     <h4>Complete watch servicing, from full rebuilds and technical revisions all the way down to battery replacement and ultrasonic cleaning.</h4>\
   </div>\
-</div>\
-<div class="row" style="text-align:left">\
-  <div class="col-md-12">\
+  <div class="col-md-8 pull-right">\
     <h4>Anything you can imagine we can do with jewellery. From completely custom build rings, converting heirlooms into a modern brooch all the way to chain repairs, ring sizing, and chain soldering.<h4>\
   </div>\
-</div>\
-<div class="row" style="text-align:left">\
-  <div class="col-md-12">\
+  <div class="col-md-8 pull-right">\
     <h4>A large variety of accessories and other services are also available. We\'re confident we can meet any of your watch and jewellery desires. Please reach out using the form at the top or at the email below.</h4>\
   </div>\
 </div>\
