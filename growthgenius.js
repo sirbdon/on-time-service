@@ -1,4 +1,4 @@
-versionNumber = { version: 89 } 
+versionNumber = { version: 90 } 
 
 $(document).ready(function() {
 
@@ -450,23 +450,26 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
   </div>\
   <div class="col-md-3">\
     <img src="http://i.imgur.com/hySpPzi.png">\
-  </div>\
-  <div class="col-md-3">\
-    <img src="http://i.imgur.com/sNYiJ7U.png">\
-  </div>\
-</div>\
-<div class="row">\
-  <div class="col-md-3">\
-    <h3><strong>30</strong> Hudson\'s Bay Locations</h3>\
-  </div>\
-  <div class="col-md-3">\
     <h3><strong>50+</strong> Watch & Jewellery Services</h3>\
   </div>\
   <div class="col-md-3">\
+    <img src="http://i.imgur.com/sNYiJ7U.png">\
     <h3><strong>200+</strong> Years of Combined Experience</h3>\
   </div>\
 </div>\
 </div>'
+
+// <div class="row">\
+//   <div class="col-md-3">\
+//     <h3><strong>30</strong> Hudson\'s Bay Locations</h3>\
+//   </div>\
+//   <div class="col-md-3">\
+//     <h3><strong>50+</strong> Watch & Jewellery Services</h3>\
+//   </div>\
+//   <div class="col-md-3">\
+//     <h3><strong>200+</strong> Years of Combined Experience</h3>\
+//   </div>\
+// </div>\
 
 $('#hero img').replaceWith(homeImg);
 
