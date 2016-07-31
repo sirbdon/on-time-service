@@ -1,4 +1,4 @@
-versionNumber = { version: 101 } 
+versionNumber = { version: 102 } 
 
 $(document).ready(function() {
 
@@ -456,6 +456,8 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
     <br>\
   </div>\
 </div>\
+<br>\
+<br>\
 <div class="row" style="text-align:left">\
   <div class="col-md-4 pull-left hidden-xs hidden-sm">\
     <img id="homeDetailsWatch" src="http://i.imgur.com/7Er7Fhv.png" style="height:340px">\
