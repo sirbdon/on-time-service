@@ -1,4 +1,4 @@
-versionNumber = { version: 102 } 
+versionNumber = { version: 103 } 
 
 $(document).ready(function() {
 
@@ -439,6 +439,9 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
     <p>EST. 1979</p>\
   </div>\
 </div>\
+<hr>\
+<br>\
+<br>\
 <div class="row">\
   <div class="col-md-4">\
     <img src="http://i.imgur.com/6uzy9Br.png">\
@@ -488,20 +491,27 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 
 $('#hero img').replaceWith(homeImg);
 
-if ( $(document).width() <= 1033 ) { $('a[href="/products/"]').html("Other") }
-if ( $(document).width() > 1033 ) { $('a[href="/products/"]').html("Other Products & Services") }
-// Hide or show watch image
-if ( $(document).width() <= 992 ) { $('#homeDetailsWatch').hide() }
-if ( $(document).width() > 992 ) { $('#homeDetailsWatch').show() }
-
-// Functions to execute on window resize
-$(window).resize(function() {
+function screenAdjusts() {
   // Fit nav bar on smaller screen
   if ( $(document).width() <= 1033 ) { $('a[href="/products/"]').html("Other") }
   if ( $(document).width() > 1033 ) { $('a[href="/products/"]').html("Other Products & Services") }
+  
   // Hide or show watch image
-  if ( $(document).width() <= 992 ) { $('#homeDetailsWatch').hide() }
-  if ( $(document).width() > 992 ) { $('#homeDetailsWatch').show() }
+  if ( $(document).width() <= 992 ) { 
+    $('#homeDetailsWatch').hide()
+    $('.homeDetails').css('text-align', 'center')
+  }
+  if ( $(document).width() > 992 ) { 
+    $('#homeDetailsWatch').show()
+    $('.homeDetails').css('text-align', 'left')
+  }
+}
+
+screenAdjusts();
+
+// Functions to execute on window resize
+$(window).resize(function() {
+ screenAdjusts()
 })
 
 // Hi to Nick

@@ -5,6 +5,7 @@
 .homeDetails {
   font-size: 20px !important;
   padding-right: 15px !important;
+  padding-left: 10px !important;
 }
 
 .form-style input[type=submit],
