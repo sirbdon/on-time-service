@@ -1,4 +1,4 @@
-versionNumber = { version: 79 } 
+versionNumber = { version: 80 } 
 
 $(document).ready(function() {
 
@@ -377,8 +377,10 @@ $("form .submit").on('click', $(this), function() {
   //   locationInsert.after(workshopLoc);
   // }
 
+  // remove 'subtitle' if not on location root page + remove workshop location if not in BC
   $('a.project div.content-fill').click(function() {
     if (locationRoot) { $('#location-subtitle').remove() }
+    if ( $(this).parents('a.project').attr('href') !== '/british-columbia/' ) { $('#workshopLoc').remove() }
   })
 
 
