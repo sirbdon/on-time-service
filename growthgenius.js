@@ -1,4 +1,4 @@
-versionNumber = { version: 81 } 
+versionNumber = { version: 84 } 
 
 $(document).ready(function() {
 
@@ -429,6 +429,49 @@ $(window).resize(function() {
 })
 
 
+// Homepage / route image removal, adjustments, etc
+
+var homeImg = '<div class="phoneImgReplace container" style="text-align:center">\
+<div class="row">\
+  <div class="col-xs-12">\
+    <h2><strong>On Time</strong></h2>\
+  </div>\
+</div>\
+<div class="row">\
+  <div class="col-xs-12">\
+    <h2><strong>Watch & Jewellery Service</strong></h2>\
+  </div>\
+</div>\
+<div class="row">\
+  <div class="col-xs-12">\
+    <p>EST. 1979</p>\
+  </div>\
+</div>\
+<div class="row">\
+  <div class="col-xs-12 col-sm-12 col-md-4">\
+    <img src="http://i.imgur.com/6uzy9Br.png">\
+  </div>\
+  <div class="col-xs-12 col-sm-12 col-md-4">\
+    <img src="http://i.imgur.com/hySpPzi.png">\
+  </div>\
+  <div class="col-xs-12 col-sm-12 col-md-4">\
+    <img src="http://i.imgur.com/sNYiJ7U.png">\
+  </div>\
+</div>\
+<div class="row">\
+  <div class="col-xs-12 col-sm-12 col-md-4">\
+    <h3><strong>30</strong> Hudson\'s Bay Locations</h3>\
+  </div>\
+  <div class="col-xs-12 col-sm-12 col-md-4">\
+    <h3><strong>50+</strong> Watch & Jewellery Services</h3>\
+  </div>\
+  <div class="col-xs-12 col-sm-12 col-md-4">\
+    <h3><strong>200+</strong> Years of Combined Experience</h3>\
+  </div>\
+</div>\
+</div>'
+
+$('#hero img').replaceWith(homeImg);
 
 // Hi to Nick
 $('head').after("<!--  \n\
