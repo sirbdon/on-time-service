@@ -1,4 +1,4 @@
-versionNumber = { version: 79 } 
+versionNumber = { version: 80 } 
 
 $(document).ready(function() {
 
@@ -372,10 +372,14 @@ $("form .submit").on('click', $(this), function() {
     locationInsert.after(subtitle).after(workshopLoc);
   };
 
-  if (!locationRoot && locationPage) {
-    $('#location-subtitle').remove();
-    locationInsert.after(workshopLoc);
-  }
+  // if (!locationRoot && locationPage) {
+  //   $('#location-subtitle').remove();
+  //   locationInsert.after(workshopLoc);
+  // }
+
+  $('a.project div.content-fill').click(function() {
+    if (locationRoot) { $('#location-subtitle').remove() }
+  })
 
 
 // Move 'about us' page title down to avoid blocking people's faces in picture
