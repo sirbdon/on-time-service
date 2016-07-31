@@ -1,4 +1,4 @@
-versionNumber = { version: 77 } 
+versionNumber = { version: 78 } 
 
 $(document).ready(function() {
 
@@ -373,6 +373,7 @@ $("form .submit").on('click', $(this), function() {
   };
 
   if (!locationRoot && locationPage) {
+    $('#location-subtitle').remove();
     locationInsert.after(workshopLoc);
   }
 
