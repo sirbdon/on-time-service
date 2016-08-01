@@ -9,9 +9,9 @@
 }
 
 .phonex-menu {
-  background-color: #5a5a5a;
-  margin-top: -5px;
-  border-radius: 5px;
+  background-color: #eaeaea !important;
+  margin-top: -5px !important;
+  border-radius: 5px !important;
 }
 
 .phonex-menu > a {

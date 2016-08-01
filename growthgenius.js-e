@@ -1,4 +1,8 @@
-versionNumber = { version: 104 } 
+versionNumber = { version: 105 } 
+
+// HTML snippet gets
+var 
+  phoneMenuImages = $('<div>').load('https://sirbdon.github.io/on-time-service/helpers.html #helper-menu-imgs')
 
 $(document).ready(function() {
 
@@ -435,7 +439,7 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 <br>\
 <br>\
 <div class="row">\
-  <h3>Convenience, service and expertise</h3>\
+  <h2>Convenience, service and expertise</h2>\
 </div>\
 <div class="row">\
   <div class="col-md-4">\
@@ -514,11 +518,13 @@ function screenAdjusts() {
     $('div.site-city-state').replaceWith(orCall);
     $('div.site-phone').replaceWith(callPhone);
     // Change top menu styling
-    $('#mobileMenuLink').addClass('phonex-menu').load('helpers.html #helper-menu-imgs')
+    $('#mobileMenuLink').addClass('phonex-menu').prepend(phoneMenuImages)
 
 
   }
 }
+
+
 
 screenAdjusts();
 
