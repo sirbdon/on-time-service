@@ -1,12 +1,11 @@
-versionNumber = { version: 119 } 
+versionNumber = { version: 120 } 
 
 // HTML snippet gets
 var
-  blankDiv = $('<div>'),
+  blankDiv = $('<div class="blankDiv">'),
   helpHtml = 'https://sirbdon.github.io/on-time-service/helpers.html',
   phoneMenuImages = blankDiv.load(helpHtml + ' #helper-menu-imgs');
-
-
+  // formHtml = blankDiv.load(helpHtml + ' #formHtml');
 
 
 
@@ -517,6 +516,7 @@ function screenAdjusts() {
     $('div.site-phone').replaceWith(callPhone);
     // Change top menu styling
     $('#mobileMenuLink').addClass('phonex-menu').prepend(phoneMenuImages)
+    $('#helper-menu-imgs').unwrap()
     $('#mobileMenuLink > a').remove()
     $('#mobileMenuLink').prepend($('<a style="display:none">'))
 
