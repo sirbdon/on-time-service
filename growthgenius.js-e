@@ -1,4 +1,4 @@
-versionNumber = { version: 120 } 
+versionNumber = { version: 121 } 
 
 // HTML snippet gets
 var
@@ -516,7 +516,7 @@ function screenAdjusts() {
     $('div.site-phone').replaceWith(callPhone);
     // Change top menu styling
     $('#mobileMenuLink').addClass('phonex-menu').prepend(phoneMenuImages)
-    $('#helper-menu-imgs').unwrap()
+    // $('#helper-menu-imgs').unwrap()
     $('#mobileMenuLink > a').remove()
     $('#mobileMenuLink').prepend($('<a style="display:none">'))
 
