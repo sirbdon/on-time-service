@@ -8,6 +8,33 @@
   padding-left: 10px !important;
 }
 
+.phonex-menu {
+  background-color: #5a5a5a;
+  margin-top: -5px;
+  border-radius: 5px;
+}
+
+.phonex-menu > a {
+  padding-top: 14px;
+  margin-bottom: -2px;
+}
+
+.phonex-menu img {
+  height:40px;
+  width:auto;
+  margin-top:5px;
+}
+
+.phonex-menu img.pull-left {
+  padding-left: 25px;
+}
+
+.phonex-menu img.pull-right {
+  padding-left: -7px;
+  padding-right: 15px;
+  margin-left: -50px;
+}
+
 .form-style input[type=submit],
 .form-style input[type=button],
 .form-next,

@@ -1,4 +1,4 @@
-versionNumber = { version: 103 } 
+versionNumber = { version: 104 } 
 
 $(document).ready(function() {
 
@@ -168,18 +168,7 @@ $(document).ready(function() {
   if ( currentPathX() !== '' ) { $('div.sqs-block-content h4.text-align-center').next().replaceWith(emailFooterEm) }
     
 
-  // ----
-  // On mobile replace phone number text with "call us" link
-  var callPhone = '<div class="site-phone"><a href="tel:+16046885317,203" style="text-decoration:underline">Call Us</a><br><span style="text-transform:lowercase !important; text-decoration:none !important; margin-top:-10px;"><a>(ext. 203)</a></span></div>'
 
-
-  // ----
-  // Actions to perform is device is phone (has screen width)
-  if (isPhoneX()) { 
-    $('div.site-city-state').replaceWith(orCall);
-    $('div.site-phone').replaceWith(callPhone);
-  }
-  
   
 
 // ====== FORM TRANSITIONS & STYLING =====
@@ -428,10 +417,13 @@ s0.parentNode.insertBefore(s1,s0);
 // Homepage / route image removal, adjustments, etc
 // col-xs-12 col-sm-12 col-md-4
 
+
+
+
 var homeImg = '<div class="phoneImgReplace container" style="text-align:center">\
 <div class="row">\
   <div class="col-md-12">\
-    <h2><strong>On Time</br>Watch & Jewellery Service</strong></h2>\
+    <h1><strong>On Time \nWatch & Jewellery Service</strong></h1>\
   </div>\
 </div>\
 <div class="row">\
@@ -443,19 +435,22 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 <br>\
 <br>\
 <div class="row">\
+  <h3>Convenience, service and expertise</h3>\
+</div>\
+<div class="row">\
   <div class="col-md-4">\
     <img src="http://i.imgur.com/6uzy9Br.png">\
-    <h3><strong>30</strong> Hudson\'s Bay Locations</h3>\
+    <h3><strong>30</strong> Hudson\'s Bay \nLocations</h3>\
     <br>\
   </div>\
   <div class="col-md-4">\
     <img src="http://i.imgur.com/hySpPzi.png">\
-    <h3><strong>50+</strong> Watch & Jewellery Services</h3>\
+    <h3><strong>50+</strong> Watch & Jewellery \nServices</h3>\
     <br>\
   </div>\
   <div class="col-md-4">\
     <img src="http://i.imgur.com/sNYiJ7U.png">\
-    <h3><strong>200+</strong> Years of Combined Experience</h3>\
+    <h3><strong>200+</strong> Years of \nCombined Experience</h3>\
     <br>\
   </div>\
 </div>\
@@ -491,6 +486,14 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 
 if ( currentPathX() === "" ) { $('#hero img').replaceWith(homeImg); }
 
+  // ----
+  // On mobile replace phone number text with "call us" link
+  var callPhone = '<div class="site-phone"><a href="tel:+16046885317,203" style="text-decoration:underline">Call Us</a><br><span style="text-transform:lowercase !important; text-decoration:none !important; margin-top:-10px;"><a>(ext. 203)</a></span></div>'
+
+
+// #mobileMenuLink > a
+// padding-top: 10px;
+
 function screenAdjusts() {
   // Fit nav bar on smaller screen
   if ( $(document).width() <= 1033 ) { $('a[href="/products/"]').html("Other") }
@@ -504,6 +507,16 @@ function screenAdjusts() {
   if ( $(document).width() > 992 ) { 
     $('#homeDetailsWatch').show()
     $('.homeDetails').css('text-align', 'left')
+  }
+
+    // Actions to perform is device is phone (has screen width)
+  if (isPhoneX()) { 
+    $('div.site-city-state').replaceWith(orCall);
+    $('div.site-phone').replaceWith(callPhone);
+    // Change top menu styling
+    $('#mobileMenuLink').addClass('phonex-menu').load('helpers.html #helper-menu-imgs')
+
+
   }
 }
 
