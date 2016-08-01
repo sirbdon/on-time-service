@@ -1,8 +1,14 @@
-versionNumber = { version: 106 } 
+versionNumber = { version: 107 } 
 
 // HTML snippet gets
 var 
   phoneMenuImages = $('<div>').load('https://sirbdon.github.io/on-time-service/helpers.html #helper-menu-imgs')
+
+
+// Store original content to replace if screen goes from phone size back to large size
+var
+  divSitePhone = $('div.site-phone')
+
 
 $(document).ready(function() {
 
@@ -514,13 +520,20 @@ function screenAdjusts() {
   }
 
     // Actions to perform is device is phone (has screen width)
-  if (isPhoneX()) { 
+  if ( isPhoneX() ) { 
     $('div.site-city-state').replaceWith(orCall);
     $('div.site-phone').replaceWith(callPhone);
     // Change top menu styling
     $('#mobileMenuLink').addClass('phonex-menu').prepend(phoneMenuImages)
+    $('#mobileMenuLink > a').html('More')
 
-
+  }
+  if ( !isPhoneX() ) { 
+    // $('div.site-city-state').replaceWith(orCall); <-- hidden div at larger widths
+    $('div.site-phone').replaceWith(divSitePhone);
+    // Change top menu styling
+    // $('#mobileMenuLink').removeClass('phonex-menu').prepend(phoneMenuImages)
+    // $('#mobileMenuLink > a').html('M')
   }
 }
 
@@ -531,6 +544,10 @@ screenAdjusts();
 // Functions to execute on window resize
 $(window).resize(function() {
  screenAdjusts()
+})
+
+$('.phonex-menu img.pull-right').click(function() {
+  $('#mobileNav').toggleClass('mobileNav')
 })
 
 // Hi to Nick

@@ -26,13 +26,12 @@
 }
 
 .phonex-menu img.pull-left {
-  padding-left: 25px;
+  padding-left: 10%;
 }
 
 .phonex-menu img.pull-right {
-  padding-left: -7px;
-  padding-right: 15px;
-  margin-left: -50px;
+  padding-right: 10%;
+  margin-left: -15%;
 }
 
 .form-style input[type=submit],
