@@ -1,4 +1,4 @@
-versionNumber = { version: 130 } 
+versionNumber = { version: 131 } 
 
 // HTML snippet gets
 var
@@ -549,7 +549,7 @@ $(window).resize(function() {
 
 
 // open menu on humburger click
-$('.phonex-menu .pull-right').click(function() {
+$('#helper-menu-imgs .open-menu').click(function() {
   $('#mobileNav').toggleClass('menu-open')
 })
 
@@ -567,8 +567,8 @@ $('#mobileMenuLink a[href="/' + pathForNav + '/"] img').addClass('phonex-img-sel
 if ( isPhoneX() ) { $('#upper-logo').after('<h1>' + stringForTitle + '</h1>') }
 
 
-// increase side of titles under images
-$('h2.project-title').css('font-size', '20px !important');
+// increase side of titles under images BROKEBEEEENNNNNNBROKE
+// $('h2.project-title').css('font-size', '20px !important');
 
 
 // Hi to Nick
