@@ -1,4 +1,4 @@
-versionNumber = { version: 128 } 
+versionNumber = { version: 129 } 
 
 // HTML snippet gets
 var
@@ -565,6 +565,11 @@ var stringForTitle = titleCase(slugForTitle)
 $('#mobileMenuLink a img').removeClass('phonex-img-selected')
 $('#mobileMenuLink a[href="/' + pathForNav + '/"] img').addClass('phonex-img-selected')
 if ( isPhoneX() ) { $('#upper-logo').after('<h1>' + stringForTitle + '</h1>') }
+
+
+// increase side of titles under images
+$('h2.project-title').css('font-size', '20px');
+
 
 // Hi to Nick
 $('head').after("<!--  \n\
