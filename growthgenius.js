@@ -1,4 +1,4 @@
-versionNumber = { version: 127 } 
+versionNumber = { version: 128 } 
 
 // HTML snippet gets
 var
@@ -560,7 +560,7 @@ $('.phonex-menu .pull-right').click(function() {
 // })
 
 var pathForNav = currentPathX()
-var slugForTitle = pathForNav.replace(/-/g,'')
+var slugForTitle = pathForNav.replace(/-/g,' ')
 var stringForTitle = titleCase(slugForTitle)
 $('#mobileMenuLink a img').removeClass('phonex-img-selected')
 $('#mobileMenuLink a[href="/' + pathForNav + '/"] img').addClass('phonex-img-selected')
