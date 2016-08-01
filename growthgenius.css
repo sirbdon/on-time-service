@@ -12,6 +12,7 @@
   background-color: #eaeaea !important;
   margin-top: -5px !important;
   border-radius: 5px !important;
+  height: 36px !important;
 }
 
 .phonex-menu > a {
@@ -32,7 +33,11 @@
 
 .phonex-menu img.pull-right {
   padding-right: 5%;
-  margin-left: -5%;
+  margin-left: 3%;
+}
+
+.phonex-menu span.pull-right {
+  margin-top: 14px;
 }
 
 .form-style input[type=submit],

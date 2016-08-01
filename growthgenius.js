@@ -1,4 +1,4 @@
-versionNumber = { version: 111 } 
+versionNumber = { version: 112 } 
 
 // HTML snippet gets
 var 
@@ -11,8 +11,7 @@ var
 $(document).ready(function() {
 
 // Store original content to replace if screen goes from phone size back to large size
-var
-  divSitePhone = $('div.site-phone');
+var divSitePhone = $('div.site-phone');
 
 // ======= HELPER FUNCTIONS: =======
 
