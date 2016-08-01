@@ -1,4 +1,4 @@
-versionNumber = { version: 112 } 
+versionNumber = { version: 113 } 
 
 // HTML snippet gets
 var 
@@ -386,17 +386,7 @@ $("form .submit").on('click', $(this), function() {
 // Move 'about us' page title down to avoid blocking people's faces in picture
 if ( currentPathX() === 'about-us' ) { $('h1.page-title').css('margin-top', '45%') }
 
-// Start of Tawk.to Script
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/579c415fc0f4ac7924b2a2d4/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-// End of Tawk.to Script
+
 
 // Contact button on product hover
 // var contactButton = '<a href="#" class="buyButton">+</a>'
@@ -525,7 +515,7 @@ function screenAdjusts() {
     $('div.site-phone').replaceWith(callPhone);
     // Change top menu styling
     $('#mobileMenuLink').addClass('phonex-menu').prepend(phoneMenuImages)
-    $('#mobileMenuLink > a').html('More')
+    $('#mobileMenuLink > a').remove()
 
   }
   if ( !isPhoneX() ) { 
@@ -546,7 +536,7 @@ $(window).resize(function() {
  screenAdjusts()
 })
 
-$('.phonex-menu img.pull-right').click(function() {
+$('.phonex-menu .pull-right').click(function() {
   $('#mobileNav').toggleClass('menu-open')
 })
 
@@ -563,6 +553,19 @@ $('head').after("<!--  \n\
                                                            \n\
                                                            \n\
                                                            -->")
+
+
+// Start of Tawk.to Script
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/579c415fc0f4ac7924b2a2d4/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+// End of Tawk.to Script
 
 }); // end doc ready
 
