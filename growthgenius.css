@@ -45,6 +45,12 @@
   margin-top: 14px;
 }
 
+@media (max-width: 360px) {
+  .phonex-menu img.pull-left {
+    margin-left: 4% !important;
+  }
+}
+
 .phonex-footer {
   text-align: center !important;
   margin-left: 9% !important;
