@@ -1,17 +1,18 @@
-versionNumber = { version: 109 } 
+versionNumber = { version: 110 } 
 
 // HTML snippet gets
 var 
-  phoneMenuImages = $('<div>').load('https://sirbdon.github.io/on-time-service/helpers.html #helper-menu-imgs')
+  phoneMenuImages = $('<div>').load('https://sirbdon.github.io/on-time-service/helpers.html #helper-menu-imgs');
 
 
-// Store original content to replace if screen goes from phone size back to large size
-var
-  divSitePhone = $('div.site-phone')
+
 
 
 $(document).ready(function() {
 
+// Store original content to replace if screen goes from phone size back to large size
+var
+  divSitePhone = $('div.site-phone');
 
 // ======= HELPER FUNCTIONS: =======
 
@@ -443,10 +444,10 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 </div>\
 <hr>\
 <br>\
-<br>\
 <div class="row">\
   <h2>Convenience, service and expertise</h2>\
 </div>\
+<br>\
 <div class="row">\
   <div class="col-md-4">\
     <img src="http://i.imgur.com/6uzy9Br.png">\
