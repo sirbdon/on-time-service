@@ -1,4 +1,4 @@
-versionNumber = { version: 113 } 
+versionNumber = { version: 114 } 
 
 // HTML snippet gets
 var 
@@ -440,17 +440,17 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 <div class="row">\
   <div class="col-md-4">\
     <img src="http://i.imgur.com/6uzy9Br.png">\
-    <h3><strong>30</strong> Hudson\'s Bay \nLocations</h3>\
+    <h3><strong>30</strong> Hudson\'s Bay<br>Locations</h3>\
     <br>\
   </div>\
   <div class="col-md-4">\
     <img src="http://i.imgur.com/hySpPzi.png">\
-    <h3><strong>50+</strong> Watch & Jewellery \nServices</h3>\
+    <h3><strong>50+</strong> Watch & Jewellery<br>Services</h3>\
     <br>\
   </div>\
   <div class="col-md-4">\
     <img src="http://i.imgur.com/sNYiJ7U.png">\
-    <h3><strong>200+</strong> Years of \nCombined Experience</h3>\
+    <h3><strong>200+</strong> Years of<br>Combined Experience</h3>\
     <br>\
   </div>\
 </div>\
@@ -515,7 +515,7 @@ function screenAdjusts() {
     $('div.site-phone').replaceWith(callPhone);
     // Change top menu styling
     $('#mobileMenuLink').addClass('phonex-menu').prepend(phoneMenuImages)
-    $('#mobileMenuLink > a').remove()
+    // $('#mobileMenuLink > a').remove()
 
   }
   if ( !isPhoneX() ) { 
