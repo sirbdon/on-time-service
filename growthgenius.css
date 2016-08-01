@@ -23,6 +23,7 @@
   height:40px;
   width:auto;
   margin-top:5px;
+  z-index: 100;
 }
 
 .phonex-menu img.pull-left {
