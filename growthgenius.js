@@ -1,4 +1,4 @@
-versionNumber = { version: 126 } 
+versionNumber = { version: 127 } 
 
 // HTML snippet gets
 var
@@ -9,6 +9,17 @@ var
 
 function removeBlankDiv() {
   $('.blankDiv').children().unwrap()
+}
+
+function titleCase(str) {
+   var splitStr = str.toLowerCase().split(' ');
+   for (var i = 0; i < splitStr.length; i++) {
+       // You do not need to check if i is larger than splitStr length, as your for does that for you
+       // Assign it back to the array
+       splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+   }
+   // Directly return the joined string
+   return splitStr.join(' '); 
 }
 
 
@@ -549,9 +560,11 @@ $('.phonex-menu .pull-right').click(function() {
 // })
 
 var pathForNav = currentPathX()
+var slugForTitle = pathForNav.replace(/-/g,'')
+var stringForTitle = titleCase(slugForTitle)
 $('#mobileMenuLink a img').removeClass('phonex-img-selected')
 $('#mobileMenuLink a[href="/' + pathForNav + '/"] img').addClass('phonex-img-selected')
-
+if ( isPhoneX() ) { $('#upper-logo').after('<h1>' + stringForTitle + '</h1>') }
 
 // Hi to Nick
 $('head').after("<!--  \n\
