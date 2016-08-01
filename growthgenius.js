@@ -1,9 +1,10 @@
-versionNumber = { version: 118 } 
+versionNumber = { version: 119 } 
 
 // HTML snippet gets
 var
+  blankDiv = $('<div>'),
   helpHtml = 'https://sirbdon.github.io/on-time-service/helpers.html',
-  phoneMenuImages = $('<div>').load(helpHtml + ' #helper-menu-imgs');
+  phoneMenuImages = blankDiv.load(helpHtml + ' #helper-menu-imgs').next().unwrap();
 
 
 
