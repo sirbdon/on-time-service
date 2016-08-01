@@ -1,4 +1,4 @@
-versionNumber = { version: 107 } 
+versionNumber = { version: 108 } 
 
 // HTML snippet gets
 var 
