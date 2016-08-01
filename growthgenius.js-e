@@ -1,4 +1,4 @@
-versionNumber = { version: 128 } 
+versionNumber = { version: 129 } 
 
 // HTML snippet gets
 var
@@ -568,7 +568,7 @@ if ( isPhoneX() ) { $('#upper-logo').after('<h1>' + stringForTitle + '</h1>') }
 
 
 // increase side of titles under images
-$('h2.project-title').css('font-size', '20px');
+$('h2.project-title').css('font-size', '20px !important');
 
 
 // Hi to Nick
