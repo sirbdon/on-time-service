@@ -1,4 +1,4 @@
-versionNumber = { version: 123 } 
+versionNumber = { version: 124 } 
 
 // HTML snippet gets
 var
@@ -539,6 +539,12 @@ $(window).resize(function() {
 $('.phonex-menu .pull-right').click(function() {
   $('#mobileNav').toggleClass('menu-open')
 })
+
+$('#helper-menu-imgs img').click(function() {
+  $('#helper-menu-imgs img').removeClass('phonex-img-selected')
+  $(this).addClass('phonex-img-selected')
+})
+
 
 // Hi to Nick
 $('head').after("<!--  \n\
