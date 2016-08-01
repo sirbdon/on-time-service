@@ -40,6 +40,11 @@
   margin-top: 14px;
 }
 
+.phonex-footer {
+  text-align: center !important;
+  margin-left: 9% !important;
+}
+
 .form-style input[type=submit],
 .form-style input[type=button],
 .form-next,

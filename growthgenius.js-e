@@ -1,4 +1,4 @@
-versionNumber = { version: 121 } 
+versionNumber = { version: 122 } 
 
 // HTML snippet gets
 var
@@ -7,6 +7,9 @@ var
   phoneMenuImages = blankDiv.load(helpHtml + ' #helper-menu-imgs');
   // formHtml = blankDiv.load(helpHtml + ' #formHtml');
 
+function removeBlankDiv() {
+  $('.blankDiv').children().unwrap()
+}
 
 
 $(document).ready(function() {
@@ -251,11 +254,6 @@ if (currentPathX() === "") {
   
 }
   
-  
-
-
-
-
 // set formData variables
 var messageX = "",
   replyTo = "",
@@ -510,7 +508,7 @@ function screenAdjusts() {
     $('.homeDetails').css('text-align', 'left')
   }
 
-    // Actions to perform is device is phone (has screen width)
+  // Actions to perform is device is phone (has screen width)
   if ( isPhoneX() ) { 
     $('div.site-city-state').replaceWith(orCall);
     $('div.site-phone').replaceWith(callPhone);
@@ -519,15 +517,14 @@ function screenAdjusts() {
     // $('#helper-menu-imgs').unwrap()
     $('#mobileMenuLink > a').remove()
     $('#mobileMenuLink').prepend($('<a style="display:none">'))
-
+    $('#footerBlock .sqs-block-content > p').addClass('phonex-footer')
   }
   if ( !isPhoneX() ) { 
-    // $('div.site-city-state').replaceWith(orCall); <-- hidden div at larger widths
-    $('div.site-phone').replaceWith(divSitePhone);
-    // Change top menu styling
-    // $('#mobileMenuLink').removeClass('phonex-menu').prepend(phoneMenuImages)
-    // $('#mobileMenuLink > a').html('M')
+    $('div.site-phone').replaceWith(divSitePhone)
+    $('#footerBlock .sqs-block-content > p').removeClass('phonex-footer')
   }
+
+  removeBlankDiv()
 }
 
 
