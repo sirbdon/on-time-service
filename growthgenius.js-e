@@ -1,4 +1,4 @@
-versionNumber = { version: 133 } 
+versionNumber = { version: 134 } 
 
 // HTML snippet gets
 var
@@ -434,6 +434,11 @@ var homeImg = '<div class="phoneImgReplace container" style="text-align:center">
 <div class="row">\
   <div class="col-md-12">\
     <h1><strong>On Time \nWatch & Jewellery Service</strong></h1>\
+  </div>\
+</div>\
+<div class="row">\
+  <div class="col-md-12">\
+    <h4>Family Owned & Operated</h4>\
   </div>\
 </div>\
 <div class="row">\
