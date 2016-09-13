@@ -1,4 +1,4 @@
-versionNumber = { version: 137 } 
+versionNumber = { version: 138 } 
 
 // HTML snippet gets
 var
@@ -358,7 +358,7 @@ $("form .submit").on('click', $(this), function() {
                     </p>\
                     <p id="location-workshop" style="font-size:18px;margin-top: 3%;margin-bottom: -3%;margin-left:auto;margin-right:auto;text-align:center;">\
                       <a href="https://goo.gl/maps/8dY4czc1xY52" target="_blank" style="text-decoration:none;">\
-                      <strong>Suite 212 (2nd Floor)</strong>\
+                      <strong>Suite 215 (2nd Floor)</strong>\
                       </br>\
                       1899 Willingdon Ave\
                       </br>\
